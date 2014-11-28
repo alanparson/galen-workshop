@@ -9,4 +9,4 @@
 @@ Parameterized using devices
 Workshop homepage on ${device} device
     ${url} ${size}
-        check specs/workshop.spec --include "${device}"
+        check galen-tests/specs/workshop.spec --include "${device}"
