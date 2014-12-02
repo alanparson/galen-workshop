@@ -9,7 +9,7 @@ splash-content   css     .splash-content
 --------------------
 splash
     width: 100% of screen/width
-    height: ~ 70% of  viewport/height
+    height: ~ 80% of  viewport/height
 
 splash-content
     centered all inside: splash
