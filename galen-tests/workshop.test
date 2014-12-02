@@ -1,10 +1,8 @@
-@@ Set url http://base.jarques.coredev/galen-workshop/website/
 
 @@ Table devices
     | device  | size     |
-    | mobile  | 500x700  |
-    | tablet  | 900x600  |
-    | desktop | 1300x700 |
+    | mobile  | 400x600  |
+    | desktop | 1200x700 |
 
 @@ Parameterized using devices
 Workshop homepage on ${device} device
