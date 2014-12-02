@@ -12,19 +12,64 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: arial;
+    font-size: 12px;
 }
 
 *, :before, :after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+h1, h2, h3, h4, h5{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+/* Wrap content */
+
+.wrapper{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Layout media query */
+
+@media screen  and (min-width: 640px) {
+    body, html {
+        font-size: 16px;
+    }
+    .wrapper{
+        max-width: 960px;
+    }
+}
+
+/* Button component */
+
+.button{
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    padding: 0.8em 2em;
+    text-align: center;
+    font-size: 1.375em;
+    color: #FFF;
+    margin-bottom: 1em;
+}
+.button.red{
+    background: #E74C3C;
+}
+.button.large{
+    font-size: 1.75em;
+    padding: 1em 3em;
+}
+
+
 /* ==========================================================================
    Header
    ========================================================================== */
 
 /* 
-   Mobile first
+   Header: Mobile first
    ========================================================================== */
 
 /* Header */
@@ -43,88 +88,131 @@ body, html {
 /* Brand */
 
 .brand{
-	float: left;
-	height: 60px;
-	line-height: 60px;
-	vertical-align: middle;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
 }
 .brand-logo{
-	width: 26px;
-	height: 27px;
-	vertical-align: middle;
-	display: inline-block;
+    width: 26px;
+    height: 27px;
+    vertical-align: middle;
+    display: inline-block;
 }
 .brand-name{
-	display: none;
+    display: none;
 }
 
 /* Nav */
 
 .main-nav{
-	float: right;
-	height: 60px;
-	line-height: 60px;
-	vertical-align: middle;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
 }
 .main-nav ul{
-	display: none;
+    display: none;
 }
 
 .main-nav-toggle{
-	color: #FFF;
-	font-weight: 900;
-	font-size: 24px;
+    color: #FFF;
+    font-weight: 900;
+    font-size: 24px;
 }
 
 
 /* 
-   Desktop
+   Header: Desktop
    ========================================================================== */
 
 @media screen  and (min-width: 640px) {
-    .header-content {
-        max-width: 960px;
+
+    .brand-name{
+        display: inline-block;
+        margin-left: 5px;
+        vertical-align: middle;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        color: #FFF;
     }
 
-	.brand-name{
-		display: inline-block;
-		margin-left: 5px;
-		vertical-align: middle;
-		font-family: 'Open Sans Condensed', sans-serif;
-		font-weight: 700;
-		font-size: 26px;
-		color: #FFF;
-	}
+    /* nav */
+    .main-nav-toggle{
+        display: none;
+    }
+    .main-nav ul{
+        display: block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+        height: 100%;
+    }
+    .main-nav ul li{
+        display: inline-block;
+        height: 100%;
 
-	/* nav */
-	.main-nav-toggle{
-		display: none;
-	}
-	.main-nav ul{
-		display: block;
-		vertical-align: middle;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		font-size: 0;
-		height: 100%;
-	}
-	.main-nav ul li{
-		display: inline-block;
-		height: 100%;
+    }
+    .main-nav ul li a{
+        color: #FFF;
+        font-weight: 300;
+        font-size: 22px;
+        padding: 0 10px;
+        text-decoration: none;
+        font-family: "Open Sans Condensed", sans-serif;
+        border-right: 1px solid #537495;
+    }
+    .main-nav ul li:last-child a{
+        padding-right: 0;
+        border-right: none;
+    }
+}
 
-	}
-	.main-nav ul li a{
-		color: #FFF;
-		font-weight: 300;
-		font-size: 22px;
-		padding: 0 10px;
-		text-decoration: none;
-		font-family: "Open Sans Condensed", sans-serif;
-		border-right: 1px solid #537495;
-	}
-	.main-nav ul li:last-child a{
-		padding-right: 0;
-		border-right: none;
-	}
+
+
+/* ==========================================================================
+   Splash
+   ========================================================================== */
+
+.splash{
+    width: 100%;
+    min-height: 70vh;
+
+    background: url("../img/bg-splash.jpg") no-repeat center;
+    background-size: cover;
+    
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+}
+
+.splash-content{
+    text-align: center;
+    width: 90%;
+}
+.splash-title{
+    font-size: 3em;
+    font-weight: 300;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
+}
+
+@media screen  and (min-width: 640px) {
+    .splash-content{
+        text-align: center;
+        width: 60%;
+    }
+    .splash-title{
+        font-size: 4em;
+    }
 }
