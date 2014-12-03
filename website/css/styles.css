@@ -6,21 +6,37 @@
 /* ==========================================================================
    Basic and layout
    ========================================================================== */
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+
+*, :before, :after {
+    box-sizing: border-box;
+}
 
 body, html {
     margin: 0;
     padding: 0;
     font-family: arial;
     font-size: 12px;
+    background: #ECF0F1;
 }
 
-*, :before, :after {
-    box-sizing: border-box;
-}
-h1, h2, h3, h4, h5{
+
+h1, h2, h3{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
+    color: #33485E;
+    margin: 0 0 0.5em 0;
+}
+h1{ font-size: 3em; }
+h2{ font-weight: 300; font-size: 2em;}
+h3{ font-size: 1.6em;}
+p{
+   margin: 0 0 1.2em 0; 
+}
+img{
+    max-width: 100%;
+    width: auto;
 }
 
 /* Wrap content */
@@ -34,7 +50,7 @@ h1, h2, h3, h4, h5{
 
 /* Layout media query */
 
-@media screen  and (min-width: 640px) {
+@media screen  and (min-width: 760px) {
     body, html {
         font-size: 16px;
     }
@@ -54,6 +70,8 @@ h1, h2, h3, h4, h5{
     font-size: 1.375em;
     color: #FFF;
     margin-bottom: 1em;
+    background: #1ABC9C;
+    text-decoration: none;
 }
 .button.red{
     background: #E74C3C;
@@ -126,7 +144,7 @@ h1, h2, h3, h4, h5{
    Header: Desktop
    ========================================================================== */
 
-@media screen  and (min-width: 640px) {
+@media screen  and (min-width: 760px) {
 
     .brand-name{
         display: inline-block;
@@ -187,7 +205,7 @@ h1, h2, h3, h4, h5{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    
+
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -207,12 +225,54 @@ h1, h2, h3, h4, h5{
     text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
 }
 
-@media screen  and (min-width: 640px) {
+@media screen  and (min-width: 760px) {
     .splash-content{
         text-align: center;
         width: 60%;
     }
     .splash-title{
         font-size: 4em;
+    }
+}
+
+
+/* ==========================================================================
+   Articles
+   ========================================================================== */
+
+/* section */
+
+
+.section-title{
+    margin: 1em auto;
+    text-align: center;
+}
+
+.article{
+    text-align: center;
+}
+.article-image{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.grid{  
+  display: -webkit-flex;  
+  display: -ms-flexbox;  
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-right: -1em;
+}
+.grid > article{
+    margin: 0 1em 1em 0;
+}
+
+@media screen  and (min-width: 760px) {
+    .grid{
+       -webkit-flex-flow: row nowrap;
+           -ms-flex-flow: row nowrap;
+               flex-flow: row nowrap; 
     }
 }

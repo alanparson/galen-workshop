@@ -17,11 +17,11 @@ image
 @@ do
 
 title
-    above: image 10 to 20 px
+    below: image 10 to 20 px
 @@ end    
 
 excerpt
-    above: title 10 to 20 px
+    below: title 10 to 20 px
 
 button
-    above: excerpt 200px
+    below: excerpt 10 to 20 px
