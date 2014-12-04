@@ -16,5 +16,5 @@ https://www.npmjs.org/package/local-web-server
 
 In galen-workshp folder:
 ```
-galen test galen-tests/cross-broser.test --htmlreport "reports"
+galen test galen-tests/cross-browser.test --htmlreport "reports"
 ```
