@@ -11,15 +11,15 @@
 <body>
 
 	<!-- header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-content wrapper">
             <a class="brand" rel="home">
                 <img class="brand-logo" alt="logo" src="img/logo.svg" width="26" height="27">
                 <strong class="brand-name">Galen Framework</strong>
             </a>
 
+			<a class="main-nav-toggle" id="toggle" href="#">&#9776;</a>
 			<nav class="main-nav">
-				<a class="main-nav-toggle">&#9776;</a>
 				<ul>
 					<li><a href="#">Section 1</a></li>
 					<li><a href="#">Section 2</a></li>
@@ -79,6 +79,26 @@
 			</ul>
 		</div>
     </footer>	
+	<script>
+	( function (doc) {
+		"use strict";
+
+		var toggle = doc.getElementById('toggle'),
+			header = doc.getElementById('header');
+
+		toggle.addEventListener('click', function ( event ) {
+			event.preventDefault();
+			console.log(header.className.indexOf('opened'));
+
+			if ( header.className.indexOf('opened') !== -1) {
+				header.className = 'header';
+			} else {
+				header.className = 'header opened';
+			}
+		});
+
+	})(document)
+	</script>
 
 </body>
 

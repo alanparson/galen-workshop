@@ -6,4 +6,5 @@
 @@ Parameterized using devices
 Workshop homepage on ${device} device
     ${url} ${size}
+        inject galen-tests/inject.js
         check galen-tests/specs/workshop.spec --include "${device}"

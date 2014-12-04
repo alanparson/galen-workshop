@@ -17,8 +17,7 @@ toggle             css    .main-nav-toggle
 --------------------
 header
     width: 100% of screen/width
-    inside: screen 0px top left right
-    height: 60px
+
 
 header-content
     centered horizontally inside: header
@@ -29,11 +28,8 @@ brand
     
 brand-logo
     inside: brand 0px left
-    centered vertically inside: header 5px
     height: 27px
     width: 26px
-
-
 
 
 @ mobile 
@@ -45,12 +41,30 @@ header-content
 brand-name
     absent
 
+@@ if
+
+nav 
+    visible
+@@ do
+
+nav-item-*
+    width: 100% of header-content/width
+
+@@ end
+
 
 @ desktop
 ------------------
 
+header
+    inside: screen 0px top left right
+    height: 60px
+
 header-content
     width: < 961px
+
+brand-logo
+    centered vertically inside: header 5px
 
 brand-name 
     near: brand-logo 5 to 20px right
