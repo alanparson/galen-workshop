@@ -1,0 +1,1 @@
+java -Xrs -jar C:\selenium-grid-node\selenium-server-standalone.jar -role node -host %COMPUTERNAME% -nodeConfig C:\selenium-grid-node\localNodeConfig.json -Dwebdriver.chrome.driver="C:\selenium-grid-node\chromedriver.exe" -Dwebdriver.ie.driver="C:\selenium-grid-node\IEDriver.exe"  
