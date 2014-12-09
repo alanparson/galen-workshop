@@ -1,6 +1,9 @@
 Galen Worshop
 ==============
 
+Definition of exercises can be found here http://slides.com/javierarques/galen
+
+
 ### Execute tests
 In galen-workshp folder:
 

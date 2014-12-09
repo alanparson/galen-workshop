@@ -95,6 +95,7 @@ nav-item-@
     near: nav-item-@{+1} ~ 0px left
     aligned horizontally: nav-item-@{+1}
 
+# The last item
 nav-item-${count("nav-item-*")}
     inside: nav ~ 0px right
     aligned horizontally: nav-item-${count("nav-item-*")-1}
